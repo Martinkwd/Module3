@@ -25,6 +25,14 @@ phoneBookABC.set("Caroline", "0412345678");
 console.log(phoneBookABC);
 
 function printPhoneBook(contacts) {
+  //Map forEach passes 3 arguments to the callback function. The first is the value, the second is the key, and the third is the Map.
+  //The map's values are the phone numbers and the keys are the names, so these parameter names are in the wrong order.
+  //It should be:
+  /*
+    contacts.forEach((phone, name) => {
+      console.log(`#${phone}: ${name}`)
+    })
+  */
   contacts.forEach((Name, phone) => {
     console.log(`#${phone}: ${Name}`);
   });

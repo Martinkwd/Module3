@@ -9,7 +9,13 @@
 const today = new Date();
 console.log("Current time is " + today.toLocaleTimeString());
 console.log(today.getHours() + " hours have passed so far today");
+//today.getMinutes() gets the minutes that have passed since the last hour. If the time is 5:34, the minutes will be 34
+//To get the minutes that have passed today, we want to multiply the number of hours by 60, and then add on the minutes, like this:
+//const minutes = today.getHours() * 60 + today.getMinutes()
 console.log(today.getMinutes() + " minutes have passed so far today");
+//today.getSeconds() gets the seconds that have passed since the last minute. If the time is 5:34:26, the seconds will be 26.
+//To get the seconds that have passed today, you'd want to multiply the hours by 60 twice to get seconds, multiply minutes by 60, and then add seconds like this:
+//const seconds = today.getHours() * 60 * 60 + today.getMinutes() * 60 + today.getSeconds()
 console.log(today.getSeconds() + " seconds have passed so far today");
 
 function myAge(Birthday) {

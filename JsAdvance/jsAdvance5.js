@@ -29,10 +29,19 @@ setTimeout(() => {
   car.description();
 }, 200);
 
+//When the exercise mentioned "creating a clone of the original and overriding it", it was meaning to set the original variable to the clone, like this:
+//car = {...car, make: "Lamborghini", model: "Urus", year: 2024}
 const newCar = { ...car, make: "Lamborghini", model: "Urus", year: 2024 };
 console.log(newCar);
 
 const boundCar = car.description.bind(newCar);
+//If the boundCar function used car instead of newCar, and the car got modified like this:
+//car = {...car, make: "Toyota", model: "Supra"}
+//the boundCar would use the old version of car, while the setTimeout one would use the new version
+//This is because the setTimeout version calls a function that would call car.description.
+//car gets read at the time the function is called, and when the function is called, car has been updated
+//When binding the function, it gets the current reference to the object. When you change the variable later on, the bound function still has the
+//reference to the old object while the variable now has the reference to the new object.
 setTimeout(boundCar, 200);
 
 // DONE

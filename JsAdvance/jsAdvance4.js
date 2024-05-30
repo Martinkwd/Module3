@@ -29,3 +29,21 @@ function printFibonacciTimeouts() {
 }
 printFibonacciTimeouts();
 // DONE
+
+//The function with the limit argument is missing from this file. Extending the uncommented function, it would look something like this:
+/*
+function printFibonacciTimeouts(limit) {
+  var array = [1, 1, 2, 3, 5, 8, 13, 21, 34];
+  let counter = 0;
+  let timerId = setTimeout(function fib() {
+    console.log(array[counter]);
+    counter++;
+    if (counter < limit) {
+      setTimeout(fib, 1000);
+    }
+  }, 1000);
+}
+printFibonacciTimeouts();
+*/
+//This function received a limit argument and has an if statement that checks if the counter is less than the limit.
+//If we have not passed the limit, then a new timer to call the function gets created

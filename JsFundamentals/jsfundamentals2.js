@@ -29,6 +29,7 @@ let four1 = 4;
 let addition1 = three1 + four1;
 
 console.log(addition1);
+//lessThan2 is trying to check whether thirty is less than four. By doing this, you'd be checking whether they are equal. To see whether thirty is less than four and get the correct answer, you'd first have to make thirty and four be numbers
 // To fix lessThan2 I have to use the Comparison type so this will check both numbers and see if it false or true. in this case it has to be false
 console.log(thirty == four);
 
