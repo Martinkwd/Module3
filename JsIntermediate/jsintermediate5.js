@@ -29,6 +29,22 @@ console.log(currencyAddition(twentyCents, tenCents));
 
 function currencyOperation(float1, float2, operation) {}
 
+//An example currencyOperation function:
+/*
+function currencyOperation(float1, float2, operation) {
+  switch (operation) {
+    case '+':
+      return (float1 + float2).toFixed(2)
+    case '-':
+      return (float1 - float2).toFixed(2)
+    case '*':
+      return (float1 * float2).toFixed(2)
+    case '/':
+      return (float1 / float2).toFixed(2)
+  }
+}
+*/
+
 // the correct float result. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch may be useful.
 
 // d) (Extension) Extend the above function to include a fourth argument numDecimals
